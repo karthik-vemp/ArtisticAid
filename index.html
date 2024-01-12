@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Example</h1>
+    
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" placeholder="Type here">
+
+    <button onclick="processInput()">Process Input</button>
+
+    <p id="output"></p>
+
+    <script>
+        function processInput() {
+            // Get the user input
+            var userInput = document.getElementById("userInput").value;
+
+            // Call a JavaScript function with the input
+            var result = processUserInput(userInput);
+
+            // Display the result
+            document.getElementById("output").innerHTML = "Result: " + result;
+        }
+
+        function processUserInput(input) {
+            // Convert the input to uppercase (for demonstration purposes)
+            var uppercaseResult = input.toUpperCase();
+            return uppercaseResult;
+        }
+    </script>
+</body>
+</html>
